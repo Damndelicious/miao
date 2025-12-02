@@ -5,6 +5,7 @@
     <title>Document</title>
 </head>
 <body>
+<h1 id="top">Hello</h1>
 <a href="https://www.baidu.com/">点我点我</a>
 <a target="_blank" href="https://www.baidu.com/">点我点我</a>
 <a target="_blank" href="mailto:jiachen.gao.edu@outlook.com">联系我们</a>
@@ -34,22 +35,40 @@
     <li>有序列表表现形式3</li>
 </ol>
 <hr>
+a标签页面内跳转
+<a href="#top">跳到顶部</a>
+<a href="#bottom">跳到底部</a>
+<a href="https://www.mi.com/index.html#bottom">跳到其他页面底部</a>
 <dl>
     <dt>写dt该条目的名字，如配料...</dt>
+    <dt title="pei liao">配料</dt>
     <dd>写该条目的定义</dd><br>
     <dd>盐</dd>
     <dd>料酒</dd>
     <dd>辣椒</dd>
 <hr>
+    <dt title="main cast" tabindex="1">主演</dt>
     <dt>主演</dt>
-    <dd>Jackey Chen</dd>
+    <dd>Jackie Chen</dd>
     <dd>Eason Chen</dd>
+    <dd><input type="text" tabindex="2"></dd>
+    <dd><input type="text" tabindex="3"></dd>
 <hr>
-    <dt>语言</dt>
-    <dd>中文</dd>
-    <dd>英文</dd>
+    <dt class="price red big">语言</dt>
+    <dd id="item1">中文</dd>
+    <dd id="item2">英文</dd>
     <dd>japanese</dd>
 </dl>
+<div id="bottom">Goodbye</div>
+<form action="">
+    
 
+
+
+    <button>提交</button>
+
+
+
+</form>
 </body> 
 </html>
