@@ -3,7 +3,7 @@
 Created using JS Bin
 http://jsbin.com
 
-Copyright (c) 2025 by Damndelicious (http://jsbin.com/xijimax/6/edit)
+Copyright (c) 2025 by Damndelicious (http://jsbin.com/fifihid/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -23,15 +23,11 @@ body>p:first-child{
   color:red;
 }
 
-
-/* error:三个选择器权重完全相同，存在包含关系，（p.a:hover/p.a:active/p.a:focus 权重都是0,1,1），
-CSS中同权重样式，书写顺序越靠后，优先级越高 */
-
 p.a:focus{
   color:blue;
 }
 
-p.a:hover{
+p.a[tabindex="1"]:hover{
   color:red;
 }
 
@@ -39,16 +35,15 @@ p.a:active{
   color:green;
 }
 
-
-span{
+p span{
   color:red;
 }
 
-span>span{
+p span span{
   color:green;
 }
 
-span>span+span{
+p span+span{
   color:blue;
 }
 
@@ -60,82 +55,50 @@ span>span+span{
   color:pink;
 }
 
-
-a[href="MAILTO:a@b.com"]{
+div a[href^="mailto:" i]{
   color:blue;
 }
-a[href="mailto:a@b.com"]{
-  color:blue;
+
+div a[href^="tel:" i]{
+  color:yellow;
 }
-/* a[href^="mailto" i]{} 加i不区分大小写*/
 
 
-a[href="tel:12345678"]{
-  color:yellow
-}
-/* a[href^="tel" i]{} 加i不区分大小写*/
-
-a[href="aaa.pdf"]{
+div a[href$=".pdf" i]{
   font-size:30px;
 }
-a[href="aaa.PDF"]{
-  font-size:30px;
-}
-/* a[href$="pdf" i]{} 加i不区分大小写*/
-/* 对a标签写5种交互状态，则选择的顺序一般为:
-lv(vl)fha*/
 
 
-div.a li:nth-child(4){
+
+div.a ul li:nth-child(4),
+div.a ul li:nth-child(5),
+div.a ul li:nth-child(6),
+div.a ul li:nth-child(7){
   color:red;
 }
 
-div.a li:nth-child(5){
+
+div.b ul li:nth-child(-n+25){
   color:red;
 }
 
-div.a li:nth-child(6){
-  color:red;
-}
-
-div.a li:nth-child(7){
-  color:red;
-}
-/* div.a li:nth-child(4),
-   div.a li:nth-child(5),
-   div.a li:nth-child(6),
-   div.a li:nth-child(7){
-  color:red;
-} 优先级为(0,2,2)*/
-
-
-div.b li:nth-child(-n+25){
-  color:red;
-}
-div.b li:nth-child(n+65){
+div.b ul li:nth-child(n+65){
   color:green;
 }
 
 
-/* 无空格使得:nth-child(n+35):nth-child(-n+50)为交集 */
-div.b li:nth-child(n+35):nth-child(-n+50){
+div.b ul li:nth-child(n+35):nth-child(-n+50){
   color:blue;
 }
 
 
-div.prime li{
-  color:lightblue;
-}
 div.prime li:nth-child(2n+4),
-div.prime li:nth-child(3n+9),
-div.prime li:nth-child(5n+25),
-div.prime li:nth-child(7n+49){
-  color:violet;
-  font-size:150%
+div.prime li:nth-child(3n+6),
+div.prime li:nth-child(5n+10),
+div.prime li:nth-child(7n+14){
+  color:red;
+  font-size:150%;
 }
-
-
-
 
 
 
