@@ -1504,7 +1504,7 @@
 
 <script id="ch0105/43">
   var n = +prompt('')
-//分解质因数是现代网络安全的基石。当有一个非常大的数字，且这个数字是由两个质数的乘积得到的，无人可以在非常短的时间内算出来。
+  //分解质因数是现代网络安全的基石。当有一个非常大的数字，且这个数字是由两个质数的乘积得到的，无人可以在非常短的时间内算出来。
   for (var i = n - 1; i >= 2; i--) {
     if (n % i == 0) {
       break
@@ -1596,4 +1596,136 @@
     }
   }
   alert(sum)
+</script>
+
+<script>
+
+  //narcissistic: 输入一个数，判断是否是水仙花数
+  //narcissistics: 输出10000以内的水仙花数
+  //palindrom: 输入一个数，判断它数是否是回文数，如1223221
+  //weekday: 输入年份与月份，输出这个月的第一天是周几（视具体设定，周一可以用1或0表示）
+  //complete - number: 输入一个数，判断它是否是完全数（自行查相关概念）
+  //prime: 输入一个数，判断它是否是素数
+  //complete - numbers: 输出1000以内的完全数
+  //primes: 输出100以内的素数
+  //itob: 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换
+  //lcf & lcm: 输入两个数，输出它们的最大公约数和最小公倍数
+  //sqrt: 输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt
+</script>
+
+<script id>
+  function isCompleteNumber(x) {
+    var count = 0
+    for (var i = 1; i < x; i++) {
+      if (x % i == 0) {
+        count += i
+      }
+    }
+    if (count == x) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function isCompleteNumber(x) {
+    var count = 1
+    for (var i = 2; i < x; i++) {
+      if (x % i == 0) {
+        count += i
+      }
+    }
+    return count == x
+  }
+
+
+  function isCompleteNumber(x) {
+    var count = 1
+    var sqrt_x = Math.sqrt(x)
+    for (var i = 2; i < sqrt_x; i++) { //这里不写<=是因为当出现两个因子相同的时候，比如16 = 4 * 4，会重复加总一次4，但是实际上16只有一个因子4 
+      if (x % i == 0) {
+        count += i + x / i
+      }
+    }
+    if (sqrt_x % 1 == 0) {   //sqrt_x % 1 == 0 数字模1是否为0能判断数字是否是整数
+      count += sqrt_x
+    }
+    return count == x
+  }
+
+  function isCompleteNumber(x) {
+    var count = 1
+    var sqrt_x = Math.sqrt(x)
+    for (var i = 2; i < sqrt_x; i++) { //这里不写<=是因为当出现两个因子相同的时候，比如16 = 4 * 4，会重复加总一次4，但是实际上16只有一个因子4 
+      if (x % i == 0) {
+        count += i + x / i
+      }
+    }
+    if (Number.isInteger(sqrt_x)) {   //
+      count += sqrt_x
+    }
+    return count == x
+  }
+</script>
+
+<script>
+  function isPalindrom(n) {
+    if (n < 0) {
+      return false
+    }
+    var revert = 0
+    var copy = n
+    while (copy > 0) {
+      var digit = copy % 10
+      revert = revert * 10 + digit
+      copy = (copy - digit) / 10
+    }
+    return revert == n
+  }
+</script>
+
+<script>
+  function digitwidth(n) {
+    if (n == 0) {
+      return 1
+    }
+
+    var width = 0
+    while (n > 0) {
+      var digit = n % 10
+      width++
+      n = (n - digit) / 10
+    }
+    return width
+  }
+
+  function isNarcissistic(n) {
+    var width = n的宽度(即是几位数)
+    var count = 0
+    var origin_n = n
+
+    while (origin_n > 0) {
+      var digit = origin_n % 10
+      count += Math.pow(digit, digitwidth(n))
+      origin_n = (origin_n - digit) / 10
+    }
+    return count == n
+  }
+</script>
+<script>
+  function digitToChar(n) {
+    return String.fromCharCode(48 + n)
+  }
+
+  function itob(n) {
+    var r = ''
+    do {
+      var digit = n % 10
+    r = digitToChar(digit)+ r   //这一步已经做了类型转换var r = ''，因此要换成的函数
+    n = (n - digit) / 10
+   } while (n > 0)
+    return r
+  }
+
+
 </script>
