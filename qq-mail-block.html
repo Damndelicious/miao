@@ -43,6 +43,7 @@
 
     /* aside元素是块元素 */
     /* asidee元素下会有留白，这是因为inline-block默认对准基线，基线下面通常会留一点空间给字母的下部或下标，因此inline-block底部会有几像素“空隙”。*/
+    /* 用vertical-align:top;可以解决这个留白 */
 
     ul {
       margin: 0px;
@@ -60,7 +61,8 @@
     }
 
     /* 给inline-block元素加内容最长的宽度只到main的包含块那么宽。在家宽度的过程中会折行,于是main跑到第二行，这时没有像第一行那样留白，因为a就是第二行的基线*/
-    /* main加入overflow:auto之后，下方也出现了留白 */
+    /* main加入overflow:auto之后，下方也出现了留白，这是因为bfc使得滑动条的长度计入了行框，使得基线的位置发生变化 */
+    /* 依旧用vertical-align:top;可以解决 */
     /* 把100vw改成100%，这样是为了如果body {overflow-y:scroll}有滚动条，main就不会跑下面去,有滚动条，100vw定值就不够了 */
     /* vw vh包含了滚动条 */
   </style>
