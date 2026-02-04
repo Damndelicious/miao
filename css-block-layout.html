@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2026 by Damndelicious (http://jsbin.com/wazumur/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style id="jsbin-css">
+    * {
+      xbackground-color: rgba(0, 0, 0, 0.08);
+      xbox-shadow: inset 0 0 1px red;
+    }
+
+
+    body {
+      margin: 0px;
+    }
+
+    header {
+      background-color: black;
+    }
+
+    header div {
+      color: white;
+      width: 600px;
+      margin: auto;
+    }
+
+    p {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* p标签本身垂直方向就有margin: 16px; 且不能嵌套任何元素 */
+
+    span {
+      text-align: center;
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+      border: 3px solid;
+      box-sizing: border-box;
+      font-size: 16px;
+      margin: 8px 15px;
+      background-color: pink;
+      line-height: 30px;
+    }
+
+    /* 这里设置的块与块之间的布局 */
+    /* 不是块元素，margin之间没有重叠了 */
+
+    span:hover {
+      background-color: red;
+    }
+
+    body>div {
+      width: 600px;
+      margin: auto;
+      overflow: hidden;
+      margin-bottom: 1em;
+    }
+
+    section {
+      margin: -8px -15px;
+      font-size: 0px;
+    }
+
+    /* 原来在这里设置了width: 630px;但是这样设置的后果是，在横向拉拽浏览器的窗口时，会改变section居中的布局 */
+    /* body > div 和section都是为了定位所有块的布局 */
+
+
+    ul {
+      padding: 0px;
+      width: 600px;
+      list-style: none;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    /*ul或li自带左padding: 40px; ul自带垂直margin各16px */
+
+    li {
+      border-bottom: 1px dotted;
+      margin-bottom: -1px;
+    }
+
+
+
+    footer {
+      text-align: center;
+      margin-top: 1em;
+      background-color: violet;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello
+      world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果
+    </div>
+  </header>
+  <p>
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+  </p>
+  <div>
+    <section>
+      <span>宽180高40(包含边框)</span>
+      <span>产品</span>
+      <span>产品</span>
+      <span>水平间隙30px</span>
+      <span>产品</span>
+      <span>产品</span>
+      <span>垂直间隙15px</span>
+      <span>产品</span>
+      <span>产品</span>
+      <span>边框宽度3px</span>
+      <span>产品</span>
+      <span>产品</span>
+    </section>
+  </div>
+
+  <ul>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+    <li>link</li>
+  </ul>
+  <footer>
+    &copy;版权所有
+    <br>
+    本页所有布局均使用块元素
+  </footer>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+    data-cf-beacon='{"version":"2024.11.0","token":"480c9d8468c44ad3bed3c74fbcc6d6f3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
