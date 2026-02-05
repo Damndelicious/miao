@@ -101,7 +101,8 @@ Released under the MIT license: http://jsbin.mit-license.org
       margin: -8px -15px;
       font-size: 0px;
     }
-
+    /* 为什么是-15px?span的水平间隙为30px,一个span元素的宽度为180px+30px，就是因为这个30px第三列才显示不出来，因此要扣除30px，两边各15px */
+    /* -8px是因为span的上方有一个margin: 8px;让它消除 */
     /* 原来在这里设置了width: 630px;但是这样设置的后果是，在横向拉拽浏览器的窗口时，会改变section居中的布局 */
     /* body > div 和section都是为了定位所有块的布局 */
 
