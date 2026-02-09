@@ -22,7 +22,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 
 body,html {
   overflow: auto;
-  width: 100%;
+  height: 100%;
   margin: 0px;
 }
 
@@ -70,6 +70,41 @@ ul.menu ul {
   left: 100%;
   top: 0px;
 }
+
+
+div {
+  background-color: black;
+  height: 50%;
+  margin: 0px;
+}
+
+div ul {
+  padding: 0;
+  list-style:none;
+  margin: 0px;
+}
+
+div .menu1 > li {
+  display: inline-block;
+  position: relative;
+  color: white;
+  margin-right: 20px;
+}
+
+div ul.menu1 > li ul {
+  display: none;
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: gray;
+  margin: 0px;
+}
+
+div ul.menu1 li:hover ul {
+   display: block;
+}
   </style>
 </head>
 
@@ -104,6 +139,93 @@ ul.menu ul {
     <li>智能 路由器</li>
     <li>电源 配件</li>
   </ul>
+  <br>
+  <br>
+  <div>
+    <ul class="menu1">
+      <li>File
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Edit
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Selection
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>View
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Go
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Run
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Terminal
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Window
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Help
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+
 </body>
 
 </html>
