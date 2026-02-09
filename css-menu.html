@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2026 by Damndelicious (http://jsbin.com/kemamut/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+*{
+  xbackground-color: rgba(0,0,0,0.08);
+  xbox-shadow:inset 0 0 1px red;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+ul li {
+   padding: 8px 15px;
+   position: relative;
+}
+
+ul.menu > li {
+  display: inline-block;
+}
+
+ul.menu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  white-space: nowrap;
+}
+
+ul.menu li:hover > ul {
+  display: block;
+}
+/* 万金油:只显示这一级li的直接子菜单，其他层级不动 */
+
+ul.menu li ul ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+</style>
+</head>
+<body>
+  <ul class="menu">
+    <li>文件
+     <ul>
+      <li>新建文件
+         <ul>
+           <li>aa
+             <ul>
+               <li>aa</li>
+               <li>bb</li>
+               <li>cc</li>
+             </ul></li>
+           <li>bb
+             <ul>
+               <li>aa</li>
+               <li>bb</li>
+               <li>cc</li>
+             </ul>
+           </li>
+           <li>cc</li>
+         </ul>
+       </li>
+      <li>打开窗口</li>
+      <li>打开文件</li>
+      <li>打开文件夹</li>
+      </ul>
+    </li>
+    <li>编辑
+    <ul>
+      <li>新建文件
+        <ul>
+          <li>aa
+           <ul>
+             <li>aa</li>
+             <li>bb</li>
+             <li>cc</li>
+           </ul>
+          </li>
+          <li>bb
+           <ul>
+             <li>aa</li>
+             <li>bb</li>
+             <li>cc</li>
+           </ul>
+          </li>
+          <li>cc</li>
+        </ul>
+      </li>
+      <li>打开窗口</li>
+      <li>打开文件</li>
+      <li>打开文件夹</li>
+      </ul>
+    </li>
+    <li>选择</li>
+    <li>查看</li>
+  </ul>
+</body>
+</html>
