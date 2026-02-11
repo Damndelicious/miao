@@ -35,8 +35,10 @@ Released under the MIT license: http://jsbin.mit-license.org
       list-style: none;
       line-height: 50px;
       width: 100%;
-      overflow: auto;
       position: relative;
+      width: 234px;
+      background-color: #a4a2a2;
+      color: #ffffff;
     }
 
     ul.up>li {
@@ -50,23 +52,28 @@ Released under the MIT license: http://jsbin.mit-license.org
     }
 
 
-    ul.up li>ul {
-      padding: 0px;
-      list-style: none;
+    ul.up li>div {
       display: none;
       position: absolute;
       top: 0;
       left: 264px;
+      height: 100%;
     }
 
-    ul.up li ul li {
+    ul.up li div ul {
+      padding-left: 0px;
+      list-style: none;
+      color: black;
+    }
+
+    ul.up li div ul li {
       width: 240px;
       height: 54px;
       padding: 8px 16px;
       white-space: nowrap;
     }
 
-    ul.up li:hover ul {
+    ul.up li:hover div {
       display: block;
     }
 
@@ -86,9 +93,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 
 
 
-
-
-    div {
+    div.vscode {
       background-color: black;
       height: 40%;
       margin: 0px;
@@ -127,28 +132,32 @@ Released under the MIT license: http://jsbin.mit-license.org
 
 <body>
   <ul class="up">
-    <li class="target">手机
-      <ul>
-        <li>Xiaomi 数字旗舰</li>
-        <li>Xiaomi Mix系列</li>
-        <li>Xiaomi Civi系列</li>
-        <li>REDMI K系列</li>
-        <li>REDMI Turbo系列</li>
-        <li>REDMI Note系列</li>
-        <li class="红米数字系列">REDMI 数字系列</li>
-      </ul>
+    <li>手机
+      <div class="phone">
+        <ul>
+          <li>Xiaomi 数字旗舰</li>
+          <li>Xiaomi Mix系列</li>
+          <li>Xiaomi Civi系列</li>
+          <li>REDMI K系列</li>
+          <li>REDMI Turbo系列</li>
+          <li>REDMI Note系列</li>
+          <li class="红米数字系列">REDMI 数字系列</li>
+        </ul>
+      </div>
     </li>
     <li>电视
-      <ul>
-        <li>小米电视S Pro Mini LED 2026</li>
-        <li>小米电视S Mini LED 2025</li>
-        <li>小米电视 S Pro 75 Mini LED 2025</li>
-        <li>小米电视 S 75 Mini LED 75英寸</li>
-        <li>REDMI 智能电视 MAX</li>
-        <li>REDMI 电视 X 2026</li>
-        <li class="remitv1">Redmi 智能电视 A Pro 65英寸 节能版</li>
-        <li class="remitv2">Redmi 智能电视 A55 2025款 55英寸</li>
-      </ul>
+      <div>
+        <ul>
+          <li>小米电视S Pro Mini LED 2026</li>
+          <li>小米电视S Mini LED 2025</li>
+          <li>小米电视 S Pro 75 Mini LED 2025</li>
+          <li>小米电视 S 75 Mini LED 75英寸</li>
+          <li>REDMI 智能电视 MAX</li>
+          <li>REDMI 电视 X 2026</li>
+          <li class="remitv1">Redmi 智能电视 A Pro 65英寸 节能版</li>
+          <li class="remitv2">Redmi 智能电视 A55 2025款 55英寸</li>
+        </ul>
+      </div>
     </li>
     <li>家电</li>
     <li>笔记本 平板 显示器</li>
@@ -160,7 +169,7 @@ Released under the MIT license: http://jsbin.mit-license.org
     <li>电源 配件</li>
   </ul>
   <br>
-  <div>
+  <div class="vscode">
     <ul class="bottom">
       <li>File
         <ul>
@@ -244,7 +253,6 @@ Released under the MIT license: http://jsbin.mit-license.org
       </li>
     </ul>
   </div>
-
 </body>
 
 </html>
