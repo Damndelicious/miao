@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2026 by Damndelicious (http://jsbin.com/wacagik/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style id="jsbin-css">
+    * {
+      xbackground-color: rgba(0, 0, 0, 0.08);
+      xbox-shadow: inset 0 0 1px red;
+    }
+
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
+
+    body>div {
+      height: 100%;
+    }
+
+    aside {
+      width: 200px;
+      float: left;
+      height: 100%;
+      overflow: auto;
+      background-color: pink;
+    }
+
+    input {
+      background-color: white;
+    }
+
+    button {
+      height: 20px;
+      width: 30px;
+      top: 65px;
+    }
+
+    ul {
+      margin: 0px;
+      list-style: none;
+    }
+
+    div.aside {
+      border-right: 2px solid;
+      box-sizing: border-box
+    }
+
+    div.aside,
+    div.sidebar {
+      float: right;
+      width: 200px;
+      height: 100%;
+      overflow: auto;
+      background-color: pink;
+      text-align: right;
+    }
+
+    /* 浮动元素的设置依赖于html元素的先后顺序 */
+
+.fantasy {
+  border-bottom: 2px solid;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100%; 
+  width: auto;
+  overflow: hidden;
+  background-color: cornsilk;
+  border: 2px solid;
+  box-sizing: border-box;
+}
+/* 这个main：如果在html里按顺序排列，那么就算它触发bfc，main也会覆盖后面两列，原因是因为后面两列在main触发bfc后设置的浮动，但是浮动元素有个原则，即不会超过其前面兄弟块元素的底部，因此后设置两个列的浮动元素反而会让后两个浮动元素紧贴main的底部 */
+div.main {
+  height: calc(100% - 70px); 
+  overflow: auto;
+}
+/* display: flow-root 创建一个无任何副作用的BFC；不截断内容、有多少显示多少是这个核心作用带来的自然结果。
+ */
+
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <aside>
+      <h1>OALD Se7en</h1>
+      <div><input type="text" value="" /><button></button></div>
+      <ul>
+        <li><a href="">word1</a></li>
+        <li><a href="">word2</a></li>
+        <li><a href="">word3</a></li>
+        <li><a href="">word4</a></li>
+        <li><a href="">word5</a></li>
+        <li><a href="">word6</a></li>
+        <li><a href="">word7</a></li>
+        <li><a href="">word8</a></li>
+        <li><a href="">word9</a></li>
+        <li><a href="">word10</a></li>
+        <li><a href="">word11</a></li>
+        <li><a href="">word12</a></li>
+        <li><a href="">word13</a></li>
+        <li><a href="">word14</a></li>
+        <li><a href="">word15</a></li>
+        <li><a href="">word16</a></li>
+        <li><a href="">word17</a></li>
+        <li><a href="">word18</a></li>
+        <li><a href="">word19</a></li>
+        <li><a href="">word20</a></li>
+        <li><a href="">word21</a></li>
+        <li><a href="">word22</a></li>
+        <li><a href="">word23</a></li>
+        <li><a href="">word24</a></li>
+        <li><a href="">word25</a></li>
+        <li><a href="">word26</a></li>
+        <li><a href="">word27</a></li>
+        <li><a href="">word28</a></li>
+        <li><a href="">word29</a></li>
+        <li><a href="">word30</a></li>
+        <li><a href="">word31</a></li>
+        <li><a href="">word32</a></li>
+        <li><a href="">word33</a></li>
+        <li><a href="">word34</a></li>
+        <li><a href="">word35</a></li>
+        <li><a href="">word36</a></li>
+        <li><a href="">word37</a></li>
+        <li><a href="">word38</a></li>
+        <li><a href="">word39</a></li>
+        <li><a href="">word40</a></li>
+        <li><a href="">word41</a></li>
+        <li><a href="">word42</a></li>
+        <li><a href="">word43</a></li>
+        <li><a href="">word44</a></li>
+        <li><a href="">word45</a></li>
+        <li><a href="">word46</a></li>
+        <li><a href="">word47</a></li>
+        <li><a href="">word48</a></li>
+        <li><a href="">word49</a></li>
+        <li><a href="">word50</a></li>
+        <li><a href="">word51</a></li>
+        <li><a href="">word52</a></li>
+        <li><a href="">word53</a></li>
+        <li><a href="">word54</a></li>
+        <li><a href="">word55</a></li>
+        <li><a href="">word56</a></li>
+        <li><a href="">word57</a></li>
+        <li><a href="">word58</a></li>
+        <li><a href="">word59</a></li>
+        <li><a href="">word60</a></li>
+      </ul>
+    </aside>
+
+    <div class="sidebar">
+      <h2>Vocabulary</h2>
+    </div>
+    <div class="aside">
+      <h2>History</h2>
+    </div>
+    <main>
+      <div class="fantasy">
+        <h2>fantasy</h2>
+      </div>
+      <div class="main">
+        <p>Lorem,ipsurm.</p>
+        <ol>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            numquam voluptatibus aspernatur nam quidem inventore, incidunt
+            temporibus odit voluptate suscipit nisi dolores labore doloribus
+            eum? Odio id error neque ullam?
+          </li>
+        </ol>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
