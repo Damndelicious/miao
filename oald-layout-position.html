@@ -37,11 +37,6 @@ Released under the MIT license: http://jsbin.mit-license.org
       background-color: buttonface;
     }
 
-    aside header {
-      position: absolute;
-      top: 0;
-    }
-
     aside {
       position: absolute;
       width: 200px;
@@ -52,12 +47,13 @@ Released under the MIT license: http://jsbin.mit-license.org
       left: 0px;
       top: 0;
       bottom: 0;
-      overflow: auto;
     }
 
     .left ul {
+      height: calc(100% - 100px);
       list-style: none;
       margin-bottom: 0px;
+      overflow: auto;
     }
 
     .right1 {
