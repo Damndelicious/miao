@@ -265,7 +265,7 @@ class MyMap {
   }
 }
 
-class LinkList {
+class LinkedList {
   constructor() {
     this._head = null;
     this._tail = null;
@@ -307,5 +307,8 @@ class LinkList {
       c++
     }
     return p.val
+  }
+  get size() {
+    return this._size
   }
 }
