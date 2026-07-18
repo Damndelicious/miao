@@ -70,8 +70,8 @@ class Complex {
 class ArrayList {
   constructor(initialCapacity = 8) {
     this._length = 0
-    this._array = new Array(this._capacity)
     this._capacity = initialCapacity
+    this._array = new Array(this._capacity)
   }
 
   at(idx) {
@@ -93,7 +93,7 @@ class ArrayList {
       }
       this._array = newArray
     }
-    this._array.push(val)
+    this._array[this._length] = val
     this._length++
     return this
   }
