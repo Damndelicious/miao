@@ -330,10 +330,11 @@ class Stack {
     }
   }
   pop() {
-    return this._stack[this._size - 1]
+    var val = this._stack[this._size - 1]
     this._stack.splice(this._size - 1, 1)
     this._size--
     this._minStack.pop()
+    return val
   }
   top() {
     return this._stack[this._size - 1]
