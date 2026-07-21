@@ -312,3 +312,35 @@ class LinkedList {
     return this._size
   }
 }
+
+class Stack {
+  constructor() {
+    this._stack = []
+    this._size = 0
+    this._minStack = []
+  }
+  push(value) {
+    this._stack[this._size] = value
+    this._size++
+    if (this._minStack.length == 0) {
+      this._minStack.push(value)
+    } else {
+      var min = this._minStack[this._minStack.length - 1]
+      this._minStack.push(Math.min(value, min))
+    }
+  }
+  pop() {
+    this._stack.splice(this._size - 1, 1)
+    this._size--
+    this._minStack.pop()
+  }
+  top() {
+    return this._stack[this._size - 1]
+  }
+  getMin() {
+    return this._minStack.at(-1)
+  }
+  get size() {
+    return this._size
+  }
+}
