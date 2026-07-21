@@ -330,6 +330,7 @@ class Stack {
     }
   }
   pop() {
+    return this._stack[this._size - 1]
     this._stack.splice(this._size - 1, 1)
     this._size--
     this._minStack.pop()
